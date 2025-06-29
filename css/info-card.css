@@ -1,0 +1,55 @@
+/* 資訊卡 */
+.info-card {
+    position: absolute;
+    left: 20px;
+    top: 150px;
+    width: 250px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: none;
+    z-index: 20;
+    font-family: "微軟正黑體", sans-serif;
+    color: #222;
+}
+
+/* 標題樣式 */
+.info-title {
+    margin-top: 0;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #0e2c4d;
+    /* 使用背景色調的深藍色 */
+}
+
+/* 內容描述樣式 */
+.info-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    /* 增加行高，提升可讀性 */
+    letter-spacing: 0.5px;
+    /* 微調字間距 */
+    margin-top: 8px;
+    margin-bottom: 12px;
+    /* 增加段落間距 */
+    color: #333;
+    /* 深灰色文字 */
+}
+
+/* 卡片顯示動畫 */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.info-card.show {
+    animation: slideIn 0.3s ease-out forwards;
+}

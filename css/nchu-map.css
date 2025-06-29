@@ -1,0 +1,41 @@
+/* 滑鼠提示 */
+#tooltip {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    pointer-events: none;
+    font-size: 14px;
+    display: none;
+    z-index: 10;
+}
+
+/* 控制按鈕 */
+#controls-panel {
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    display: flex;
+    gap: 8px;
+    z-index: 1000;
+    pointer-events: auto;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    padding: 10px;
+    transform: translateX(-50%);
+}
+
+#controls-panel button {
+    padding: 6px 12px;
+    font-size: 14px;
+    background-color: #e4c445;
+    color: #333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#controls-panel button:hover {
+    background-color: #c0ae67;
+}

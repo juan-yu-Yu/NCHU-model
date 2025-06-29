@@ -1,0 +1,34 @@
+.popover {
+    max-width: 200px;
+}
+
+.member-popup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.member {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.member img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Modal 圓形圖片 */
+.modal-body img {
+    object-fit: cover;
+}
+
+/* 小螢幕時自動轉列 */
+@media (max-width: 576px) {
+    .modal-dialog {
+        width: 90%;
+    }
+}

@@ -1,0 +1,191 @@
+  * {
+      box-sizing: border-box;
+  }
+
+  body {
+      margin: 0;
+      height: 100vh;
+      background-color: #0e2c4d;
+  }
+
+  .main-content {
+      display: none;
+  }
+
+
+  /* 導覽列外層 */
+  .nav {
+      position: fixed;
+      width: 100%;
+      /* z-index: 1000; */
+      display: flex;
+      justify-content: flex-start;
+      /* 從左開始 */
+      padding-left: 60px;
+      /* 這裡控制偏右的距離，可依需要調整，例如改成 80px、100px */
+      padding-top: 10px;
+  }
+
+  /* 放按鈕的容器 */
+  .itemBox {
+      display: flex;
+      gap: 12px;
+      /* 按鈕之間的間距 */
+  }
+
+  .icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      color: #C0AE67;
+      /* 主色 */
+      background-color: transparent;
+      transition: background-color 0.3s ease, transform 0.1s ease;
+      cursor: pointer;
+      border: none;
+      padding: 5px;
+      text-decoration: none;
+      /* 取消 a 預設下劃線 */
+  }
+
+  /* hover 效果 */
+  .icon:hover,
+  .about-icon:hover {
+      background-color: #fff;
+  }
+
+  /* active/按下效果 */
+  .icon:active {
+      background-color: #e6dbb2;
+      transform: scale(0.95);
+  }
+
+  /* SVG大小一致 */
+  .icon svg {
+      width: 24px;
+      height: 24px;
+      fill: currentColor;
+  }
+
+  .main {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      height: 100vh;
+      padding-right: 20px;
+  }
+
+  .sidebar {
+      position: absolute;
+      top: 150px;
+      right: 20px;
+      width: 260px;
+      background-color: #f5f5f5;
+      padding: 12px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      font-family: "Noto Sans TC", sans-serif;
+  }
+
+  /* 上方標籤區 */
+  .tab {
+      display: flex;
+      border-bottom: 2px solid #ccc;
+      margin-bottom: 10px;
+  }
+
+  .tab-button {
+      flex: 1;
+      padding: 10px;
+      font-size: 16px;
+      background-color: transparent;
+      border: none;
+      border-bottom: 4px solid transparent;
+      cursor: pointer;
+      transition: all 0.3s ease;
+  }
+
+  .tab-button.active {
+      background-color: #C0AE67;
+      border-bottom: 4px solid #999;
+      font-weight: bold;
+  }
+
+  .accordion-button {
+      font-weight: bold;
+  }
+
+  /* ✅ 取消自動 focus 樣式 */
+  .accordion-button:focus {
+      box-shadow: none;
+      outline: none;
+  }
+
+  .accordion-body .border {
+      background-color: #fff;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+  }
+
+  .accordion-body .border:hover {
+      background-color: #eee;
+  }
+
+  /* 學院清單 */
+  .faculty-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+  }
+
+  .faculty-list li {
+      padding: 10px 15px;
+      margin: 5px 0;
+      border-bottom: 1px solid #25143f;
+      background-color: #ffffff;
+      cursor: pointer;
+      text-align: center;
+      transition: background-color 0.2s ease;
+  }
+
+  .faculty-list li:hover {
+      background-color: #ddd;
+  }
+
+  .custom-btn {
+      background-color: white;
+      color: black;
+      border: 1px solid #dee2e6;
+      outline: none;
+  }
+
+  .custom-btn:hover {
+      background-color: #f8f9fa;
+      /* Bootstrap 的淡灰 hover 效果 */
+  }
+
+  /* 修改點開時（非 collapsed 狀態）的背景色與字體顏色 */
+  .custom-accordion-button:not(.collapsed) {
+      background-color: #e4c445;
+      color: black;
+  }
+
+  /* 取消預設藍色 focus 邊框（可選） */
+  .custom-accordion-button:focus {
+      box-shadow: none;
+  }
+
+  /* 按鈕改為白底黑字樣式 */
+  .custom-btn {
+      background-color: white;
+      color: black;
+      border: 1px solid #dee2e6;
+      outline: none;
+  }
+
+  .custom-btn:hover {
+      background-color: #f8f9fa;
+  }
